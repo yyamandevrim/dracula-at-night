@@ -113,6 +113,13 @@ function functions({ base }: Colors): TokenSettings[] {
       settings: {
         foreground: base.fg
       }
+    },
+    {
+      name: 'Ruby kernel functions',
+      scope: ['support.function.kernel.ruby'],
+      settings: {
+        foreground: base.pink
+      }
     }
   ];
 }
@@ -142,6 +149,7 @@ function symbols({ base }: Colors): TokenSettings {
     scope: [
       'constant.language.symbol.hashkey.ruby',
       'constant.language.symbol.hashkey.parameter.function.ruby',
+      'constant.other.symbol.hashkey.parameter.function.ruby',
       'constant.language.symbol.ruby',
       'constant.other.symbol.hashkey.ruby',
       'constant.other.symbol.ruby',

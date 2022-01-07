@@ -6,7 +6,8 @@ export default (colors: Colors): TokenSettings[] => [
   keys(colors),
   types(colors),
   actions(colors),
-  variables(colors)
+  variables(colors),
+  ...comments(colors),
 ];
 
 function separators({ base }: Colors): TokenSettings {
@@ -27,6 +28,25 @@ function keys({ base }: Colors): TokenSettings {
       foreground: base.yellow
     }
   };
+}
+
+function comments({ misc }: Colors): TokenSettings[] {
+  return [
+    {
+      name: 'GraphQL comments',
+      scope: ['comment.line.graphql'],
+      settings: {
+        foreground: misc.comment,
+      }
+    },
+    {
+      name: 'GraphQL Docstrings',
+      scope: ['string.block.description.graphql.DOCSTRING'],
+      settings: {
+        foreground: misc.comment,
+      },
+    }
+  ]
 }
 
 function types({ base }: Colors): TokenSettings {
