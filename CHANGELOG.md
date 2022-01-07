@@ -1,5 +1,13 @@
 # Changelog
 
+## 2.7.1
+
+Small set of fixes:
+
+- GraphQL comments and docstrings
+- Ruby kernel functions
+- Ruby hash key symbols in method parameters
+
 ## 2.7.0
 
 v2.7 updates syntax coloring rules for Ruby. The rules now align closely with the rules for Elixir. Key changes:
